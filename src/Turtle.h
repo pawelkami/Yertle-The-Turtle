@@ -9,12 +9,12 @@ private:
 	/*!
 	*  Weight of a Turtle.
 	*/
-	unsigned long long weight;
+	unsigned int weight;
 
 	/*!
 	*  Strength of a Turtle.
 	*/
-	unsigned long long strength;
+	unsigned int strength;
 
 public:
 	/*!
@@ -28,23 +28,23 @@ public:
 	*  @param weight Weight of a Turtle
 	*  @param strength Strength of a Turtle
 	*/
-	Turtle(unsigned long long weight, unsigned long long strength);
+	Turtle(unsigned int weight, unsigned int strength);
 	~Turtle();
 
 	/*!
 	*   @return Weight of a Turtle.
 	*/
-	inline unsigned long long getWeight() const;
+	inline unsigned int getWeight() const;
 
 	/*!
 	*   @return Strength of a Turtle.
 	*/
-	inline unsigned long long getStrength() const;
+	inline unsigned int getStrength() const;
 	
 	/*!
 	*   @return Capacity of a Turtle(strength-weight).
 	*/
-	unsigned long long getCapacity() const;
+	unsigned int getCapacity() const;
 
 
 	bool operator<(const Turtle&) const;

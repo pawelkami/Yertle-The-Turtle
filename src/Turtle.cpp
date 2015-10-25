@@ -10,7 +10,7 @@ Turtle::Turtle()
 	strength = weight + rand();
 }
 
-Turtle::Turtle(unsigned long long w, unsigned long long s)
+Turtle::Turtle(unsigned int w, unsigned int s)
 {
 	weight = w;
 	strength = s;
@@ -21,24 +21,26 @@ Turtle::~Turtle()
 {
 }
 
-unsigned long long Turtle::getWeight() const
+unsigned int Turtle::getWeight() const
 {
 	return weight;
 }
 
-unsigned long long Turtle::getStrength() const
+unsigned int Turtle::getStrength() const
 {
 	return strength;
 }
 
-unsigned long long Turtle::getCapacity() const
+unsigned int Turtle::getCapacity() const
 {
 	return strength - weight;
 }
 
 bool Turtle::operator<(const Turtle& t) const
 {
-	return getCapacity() < t.getCapacity();
+	if (getWeight() == t.getWeight())
+		return getStrength() < t.getStrength();
+	return getWeight() < t.getWeight();
 }
 
 bool Turtle::operator>(const Turtle& t) const
