@@ -20,16 +20,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\project_declarations.h" />
+    <ClInclude Include="src\ResultsTable.h" />
     <ClInclude Include="src\Throne.h" />
     <ClInclude Include="src\ThroneDynamicProgramming.h" />
     <ClInclude Include="src\ThroneGreedy.h" />
+    <ClInclude Include="src\Timer.h" />
     <ClInclude Include="src\Turtle.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\ResultsTable.cpp" />
     <ClCompile Include="src\Throne.cpp" />
     <ClCompile Include="src\ThroneDynamicProgramming.cpp" />
     <ClCompile Include="src\ThroneGreedy.cpp" />
+    <ClCompile Include="src\Timer.cpp" />
     <ClCompile Include="src\Turtle.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -24,6 +24,7 @@ void Throne::generateTurtles()
 
 void Throne::generateTurtles(unsigned int count)
 {
+	turtles.clear();
 	count = (count > MAX_TURTLES ? MAX_TURTLES : count);
 
 	for (unsigned int i = 0; i < count; ++i)
