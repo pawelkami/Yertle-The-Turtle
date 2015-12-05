@@ -1,12 +1,16 @@
+#ifndef THRONE_NAIVE_H
+#define THRONE_NAIVE_H
+
 #include <vector>
 #include "Turtle.h"
 #include "project_declarations.h"
 #include "Throne.h"
+#include <list>
 
-class ThroneGreedy : public Throne
+class ThroneNaive : public Throne
 {
-private:
-	unsigned int findThroneFromIterator(std::vector<Turtle>::iterator it);
 public:
 	unsigned int solve();
 };
+
+#endif

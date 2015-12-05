@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Turtle.h"
 #include "ThroneDynamicProgramming.h"
-#include "ThroneGreedy.h"
+#include "ThroneFast.h"
+#include "ThroneNaive.h"
 #include <ctime>
 #include "project_declarations.h"
 #include "ResultsTable.h"
@@ -11,7 +12,8 @@ using namespace std;
 int main(int argc, char** argv)
 {
 	//ThroneDynamicProgramming throne;
-	ThroneGreedy throne;
+	ThroneFast throne;
+	//ThroneNaive throne;
 	//throne.generateTurtles(1300);
 
 	ResultsTable results;

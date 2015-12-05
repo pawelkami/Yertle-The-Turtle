@@ -1,10 +1,10 @@
-#include "ThroneGreedy.h"
+#include "ThroneFast.h"
 #include <algorithm>
 
 using namespace std;
 
 
-unsigned int ThroneGreedy::solve()
+unsigned int ThroneFast::solve()
 {
 	sort(turtles.begin(), turtles.end());
 	
@@ -16,7 +16,7 @@ unsigned int ThroneGreedy::solve()
 	return maxHeight;
 }
 
-unsigned int ThroneGreedy::findThroneFromIterator(std::vector<Turtle>::iterator it)
+unsigned int ThroneFast::findThroneFromIterator(std::vector<Turtle>::iterator it)
 {
 	unsigned int stackWeight = 0, stackHeight = 0;
 	auto lastTurtle = it;

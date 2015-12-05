@@ -23,7 +23,8 @@
     <ClInclude Include="src\ResultsTable.h" />
     <ClInclude Include="src\Throne.h" />
     <ClInclude Include="src\ThroneDynamicProgramming.h" />
-    <ClInclude Include="src\ThroneGreedy.h" />
+    <ClInclude Include="src\ThroneFast.h" />
+    <ClInclude Include="src\ThroneNaive.h" />
     <ClInclude Include="src\Timer.h" />
     <ClInclude Include="src\Turtle.h" />
   </ItemGroup>
@@ -32,7 +33,8 @@
     <ClCompile Include="src\ResultsTable.cpp" />
     <ClCompile Include="src\Throne.cpp" />
     <ClCompile Include="src\ThroneDynamicProgramming.cpp" />
-    <ClCompile Include="src\ThroneGreedy.cpp" />
+    <ClCompile Include="src\ThroneFast.cpp" />
+    <ClCompile Include="src\ThroneNaive.cpp" />
     <ClCompile Include="src\Timer.cpp" />
     <ClCompile Include="src\Turtle.cpp" />
   </ItemGroup>
