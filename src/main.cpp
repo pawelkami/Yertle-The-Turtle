@@ -12,8 +12,8 @@ using namespace std;
 int main(int argc, char** argv)
 {
 	//ThroneDynamicProgramming throne;
-	ThroneFast throne;
-	//ThroneNaive throne;
+	//ThroneFast throne;
+	ThroneNaive throne;
 	//throne.generateTurtles(1300);
 
 	ResultsTable results;

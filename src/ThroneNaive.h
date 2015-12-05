@@ -11,6 +11,7 @@ class ThroneNaive : public Throne
 {
 public:
 	unsigned int solve();
+	//unsigned int solve1();
 };
 
 #endif

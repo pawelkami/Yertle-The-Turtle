@@ -30,7 +30,7 @@ void Throne::generateTurtles(unsigned int count)
 	for (unsigned int i = 0; i < count; ++i)
 		addTurtle();
 
-	sort(turtles.begin(), turtles.end());
+	//sort(turtles.begin(), turtles.end());
 }
 
 void Throne::printTurtles() const
