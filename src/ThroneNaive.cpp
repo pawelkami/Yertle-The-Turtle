@@ -9,7 +9,7 @@ unsigned int ThroneNaive::solve()
 {
 	auto firstTurtle = min_element(turtles.begin(), turtles.end());	// putting first turtle on stack
 	
-	if (firstTurtle == turtles.end())	// if there is no turtles in vector, return 0
+	if (firstTurtle == turtles.end())	// if there are no turtles in vector, return 0
 		return 0;
 
 	unsigned int stackWeight = firstTurtle->getWeight(), stackHeight = 1;

@@ -9,18 +9,17 @@ unsigned int ThroneFast::solve()
 	sort(turtles.begin(), turtles.end());
 	
 	unsigned int maxHeight = 0;
-
-	auto it = turtles.begin();		
-	maxHeight = max(maxHeight, findThroneFromIterator(it));
+	
+	maxHeight = max(maxHeight, findThrone());
 	
 	return maxHeight;
 }
 
-unsigned int ThroneFast::findThroneFromIterator(std::vector<Turtle>::iterator it)
+unsigned int ThroneFast::findThrone()
 {
 	unsigned int stackWeight = 0, stackHeight = 0;
-	auto lastTurtle = it;
-	for (; it != turtles.end(); ++it)
+	auto lastTurtle = turtles.begin();
+	for (auto it = turtles.begin(); it != turtles.end(); ++it)
 	{
 		if (lastTurtle->getCapacity() > it->getCapacity() && it->getCapacity() >= stackWeight)
 		{

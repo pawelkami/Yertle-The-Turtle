@@ -10,7 +10,7 @@
 class ThroneFast : public Throne
 {
 private:
-	unsigned int findThroneFromIterator(std::vector<Turtle>::iterator it);
+	unsigned int findThrone();
 public:
 	unsigned int solve();
 };

@@ -18,8 +18,6 @@ void Throne::generateTurtles()
 	int max = rand() % MAX_TURTLES;
 	for (int i = 0; i < max; ++i)
 		addTurtle();
-
-	sort(turtles.begin(), turtles.end());
 }
 
 void Throne::generateTurtles(unsigned int count)
@@ -29,8 +27,6 @@ void Throne::generateTurtles(unsigned int count)
 
 	for (unsigned int i = 0; i < count; ++i)
 		addTurtle();
-
-	//sort(turtles.begin(), turtles.end());
 }
 
 void Throne::printTurtles() const
