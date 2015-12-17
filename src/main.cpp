@@ -9,16 +9,51 @@
 
 using namespace std;
 
+void displayMenu()
+{
+	cout << "1. Dynamic programming.\n"
+		<< "2. Naive.\n"
+		<< "3. Fast.\n"
+		<< "4. exit.\n";
+}
+
 int main(int argc, char** argv)
 {
-	//ThroneDynamicProgramming throne;
+	ThroneDynamicProgramming throneDynamic;
+	ThroneNaive throneNaive;
+	ThroneFast throneFast;
+
 	//ThroneFast throne;
-	ThroneNaive throne;
+	//ThroneNaive throne;
 	//throne.generateTurtles(1300);
 
 	ResultsTable results;
+	int choice = 0;
+	bool running = true;
+	while (running)
+	{
+		displayMenu();
+		cin >> choice;
+		switch (choice)
+		{
+		case 1:
+			results.generateSolveAndPrintResults(throneDynamic);
+			break;
+			
+		case 2:
+			results.generateSolveAndPrintResults(throneNaive);
+			break;
+		
+		case 3:
+			results.generateSolveAndPrintResults(throneFast);
+			break;
 
-	results.generateSolveAndPrintResults(throne);
+		case 4:
+			running = false;
+			break;
+		};
+	}
+	//results.generateSolveAndPrintResults(throne);
 	//odpowiedz 3
 	//throne.addTurtle(300, 1000);
 	//throne.addTurtle(200, 600);

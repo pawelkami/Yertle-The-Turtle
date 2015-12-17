@@ -14,6 +14,7 @@ public:
 	virtual void generateTurtles();
 	virtual void generateTurtles(unsigned int count);
 	virtual void printTurtles() const;
+	virtual void clear();
 	virtual unsigned int solve() = 0;
 };
 

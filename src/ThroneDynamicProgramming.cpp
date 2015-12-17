@@ -50,12 +50,12 @@ unsigned int ThroneDynamicProgramming::solve()
 		}
 	}
 
-	for (unsigned int i = 0; i < N; ++i)
-	{
-		for (unsigned j = 0; j < i + 3; ++j)
-			cout << table[i][j] << "\t";
-		cout << endl;
-	}
+	//for (unsigned int i = 0; i < N; ++i)
+	//{
+	//	for (unsigned j = 0; j < i + 3; ++j)
+	//		cout << table[i][j] << "\t";
+	//	cout << endl;
+	//}
 
 	// looking for index of last element in last row(height of Throne)
 	for (unsigned int i = N; i >= 0; --i)

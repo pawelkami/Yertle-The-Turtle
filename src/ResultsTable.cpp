@@ -11,7 +11,9 @@ ResultsTable::ResultsTable()
 
 void ResultsTable::generateSolveAndPrintResults(Throne& throne)
 {
-	for (int i = 100; i < MAX_TURTLES; i += 400)
+	throne.clear();
+	times.clear();
+	for (int i = 100; i < MAX_TURTLES; i += 450)
 	{
 		throne.generateTurtles(i);
 		Timer::getInstance().start();
