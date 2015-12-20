@@ -25,5 +25,5 @@ void Timer::stop()
 
 time_t Timer::result()
 {
-	return time_end - time_begin;
+	return ( double( time_end - time_begin ) / CLOCKS_PER_SEC ) * 1000;
 }

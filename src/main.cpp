@@ -24,7 +24,7 @@ int main(int argc, char** argv)
 	unique_ptr<Throne> throne;
 	//throne.generateTurtles(1300);
 
-	ResultsTable results(0, 100);
+	ResultsTable results(450, 100);
 	int choice = 0;
 	bool running = true;
 	while (running)
