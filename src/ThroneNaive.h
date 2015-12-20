@@ -11,7 +11,7 @@ class ThroneNaive : public Throne
 {
 public:
 	unsigned int solve();
-	//unsigned int solve1();
+	double getTn(const unsigned int problemSize) const;
 };
 
 #endif

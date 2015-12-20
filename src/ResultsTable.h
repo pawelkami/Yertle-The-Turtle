@@ -10,9 +10,12 @@ class ResultsTable
 {
 private:
 	std::vector< std::tuple<int, time_t, int> > times;
+	unsigned int increasingProblem;	// how much to increase problem
+	unsigned int startingFrom;	// size of starting problem
+	int median;
 
 public:
-	ResultsTable();
+	ResultsTable(unsigned int increasing, unsigned int starting);
 	void generateSolveAndPrintResults(Throne&);
 };
 

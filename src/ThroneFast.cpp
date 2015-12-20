@@ -1,5 +1,6 @@
 #include "ThroneFast.h"
 #include <algorithm>
+#include <math.h>
 
 using namespace std;
 
@@ -13,6 +14,15 @@ unsigned int ThroneFast::solve()
 	maxHeight = max(maxHeight, findThrone());
 	
 	return maxHeight;
+}
+
+double ThroneFast::getTn(const unsigned int problemSize) const
+{
+	// T(n) = n*log(n) + n
+	double res1 = problemSize*log2(problemSize);
+	double res2 = problemSize;
+	
+	return res1 + res2;
 }
 
 unsigned int ThroneFast::findThrone()

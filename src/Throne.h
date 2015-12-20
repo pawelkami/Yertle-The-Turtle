@@ -15,6 +15,7 @@ public:
 	virtual void generateTurtles(unsigned int count);
 	virtual void printTurtles() const;
 	virtual void clear();
+	virtual double getTn(const unsigned int problemSize) const = 0;
 	virtual unsigned int solve() = 0;
 };
 

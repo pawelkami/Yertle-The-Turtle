@@ -45,8 +45,6 @@ void Throne::generateTurtles(unsigned int count)
 		}
 		addTurtle(weight, strength);
 	}
-
-	assert(turtle.getStrength() < turtle.getWeight());
 }
 
 void Throne::printTurtles() const

@@ -45,3 +45,9 @@ unsigned int ThroneNaive::solve()
 
 	return stackHeight;
 }
+
+double ThroneNaive::getTn(const unsigned int problemSize) const
+{
+	// T(n) = n + n*n
+	return problemSize * problemSize + problemSize;
+}

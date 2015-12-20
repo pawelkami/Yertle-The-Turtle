@@ -13,6 +13,7 @@ private:
 	unsigned int findThrone();
 public:
 	unsigned int solve();
+	double getTn(const unsigned int problemSize) const;
 };
 
 #endif

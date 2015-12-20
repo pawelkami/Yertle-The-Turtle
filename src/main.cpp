@@ -6,6 +6,7 @@
 #include <ctime>
 #include "project_declarations.h"
 #include "ResultsTable.h"
+#include <memory>
 
 using namespace std;
 
@@ -19,15 +20,11 @@ void displayMenu()
 
 int main(int argc, char** argv)
 {
-	ThroneDynamicProgramming throneDynamic;
-	ThroneNaive throneNaive;
-	ThroneFast throneFast;
 
-	//ThroneFast throne;
-	//ThroneNaive throne;
+	unique_ptr<Throne> throne;
 	//throne.generateTurtles(1300);
 
-	ResultsTable results;
+	ResultsTable results(450, 100);
 	int choice = 0;
 	bool running = true;
 	while (running)
@@ -37,15 +34,18 @@ int main(int argc, char** argv)
 		switch (choice)
 		{
 		case 1:
-			results.generateSolveAndPrintResults(throneDynamic);
+			throne = unique_ptr<ThroneDynamicProgramming>(new ThroneDynamicProgramming);
+			results.generateSolveAndPrintResults(*throne);
 			break;
 			
 		case 2:
-			results.generateSolveAndPrintResults(throneNaive);
+			throne = unique_ptr<ThroneNaive>(new ThroneNaive);
+			results.generateSolveAndPrintResults(*throne);
 			break;
 		
 		case 3:
-			results.generateSolveAndPrintResults(throneFast);
+			throne = unique_ptr<ThroneFast>(new ThroneFast);
+			results.generateSolveAndPrintResults(*throne);
 			break;
 
 		case 4:

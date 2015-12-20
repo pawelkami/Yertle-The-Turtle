@@ -13,6 +13,7 @@ public:
 	~ThroneDynamicProgramming();
 
 	unsigned int solve();
+	double getTn(const unsigned int problemSize) const;
 
 };
 

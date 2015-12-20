@@ -69,3 +69,13 @@ unsigned int ThroneDynamicProgramming::solve()
 
 	return 0;
 }
+
+double ThroneDynamicProgramming::getTn(const unsigned int problemSize) const
+{
+	// T(n) = n*log(n) + n*n + n*n + n
+	double res1 = problemSize * log2(problemSize);
+	double res2 = problemSize * problemSize;
+	
+	//return std::max(res1, res2);
+	return res1 +  2.0 * res2;
+}
