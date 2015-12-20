@@ -10,8 +10,9 @@ ResultsTable::ResultsTable(unsigned int increasing, unsigned int starting) : inc
 {
 	unsigned int actual = starting, i = 0;
 	// counting how many iterations
-	for (; actual <= MAX_TURTLES; actual += increasing)
-		++i;
+	if(increasing > 0)
+		for (; actual <= MAX_TURTLES; actual += increasing)
+			++i;
 	
 	median = i & 1 ? starting + (i >> 1)*increasing : starting + ((i>>1)-1)*increasing/*( (starting << 1) + (i - 1) * increasing ) >> 1*/;
 }
@@ -31,6 +32,9 @@ void ResultsTable::generateSolveAndPrintResults(Throne& throne)
 		times.push_back( std::make_tuple(i, Timer::getInstance().result(), height) );
 		if (i == median)
 			medianTime = Timer::getInstance().result();
+
+		if (increasingProblem == 0)
+			break;
 
 	}
 
