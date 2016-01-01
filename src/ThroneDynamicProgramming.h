@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #ifndef THRONEDYNAMICPROGRAMMING_H
 #define THRONEDYNAMICPROGRAMMING_H
 

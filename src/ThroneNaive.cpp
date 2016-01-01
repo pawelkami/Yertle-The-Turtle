@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #include "ThroneNaive.h"
 #include <algorithm>
 #include <list>
@@ -17,7 +20,7 @@ unsigned int ThroneNaive::solve()
 	Turtle lastTurtle = *firstTurtle;
 	turtles.erase(firstTurtle);	// erase first turtle from vector
 
-	for (int i = 0; i < turtles.size(); ++i)
+	for (int i = turtles.size(); i > 0; --i)
 	{
 		auto it = min_element(turtles.begin(), turtles.end());	// looking for the lightest turtle
 		

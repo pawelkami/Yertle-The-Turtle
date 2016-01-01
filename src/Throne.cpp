@@ -1,9 +1,17 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #include "Throne.h"
 #include <algorithm>
 #include "project_declarations.h"
 #include <iostream>
 #include <random>
 #include <assert.h>
+#include <iostream>
+#include <cstdlib>
+#include <string>
+
+using namespace std;
 
 void Throne::addTurtle()
 {
@@ -56,4 +64,40 @@ void Throne::printTurtles() const
 void Throne::clear()
 {
 	turtles.clear();
+}
+
+void Throne::readData()
+{
+	while (!cin.eof())
+	{
+		string::iterator it;
+		string weight, strength, tmp;
+
+		getline(cin, tmp);
+
+		if (tmp.empty())
+			continue;
+
+		it = tmp.begin();
+
+		while (*it != ' ')
+		{
+			weight.push_back(*it++);
+		}
+
+		++it;
+		
+		while (it != tmp.end() && *it != ' ')
+		{
+			strength.push_back(*it++);
+		}
+
+		Turtle turtle( atoi(weight.c_str() ), atoi( strength.c_str() ) );
+		turtles.push_back(turtle);
+	}
+}
+
+unsigned int Throne::getSize() const
+{
+	return turtles.size();
 }

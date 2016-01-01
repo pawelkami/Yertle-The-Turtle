@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #include "Timer.h"
 
 Timer::Timer()

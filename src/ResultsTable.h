@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #ifndef RESULT_TABLE_H
 #define RESULT_TABLE_H
 
@@ -15,8 +18,10 @@ private:
 	int median;
 
 public:
+	ResultsTable();
 	ResultsTable(unsigned int increasing, unsigned int starting);
 	void generateSolveAndPrintResults(Throne&);
+	void solveAndPrintResults(Throne&);
 };
 
 #endif

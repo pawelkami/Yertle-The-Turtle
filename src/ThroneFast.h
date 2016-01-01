@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #ifndef THRONE_FAST_H
 #define THRONE_FAST_H
 

@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #include "ThroneFast.h"
 #include <algorithm>
 #include <math.h>

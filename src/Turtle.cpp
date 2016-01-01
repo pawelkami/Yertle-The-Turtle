@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #include "Turtle.h"
 #include <cstdlib>
 #include <iostream>

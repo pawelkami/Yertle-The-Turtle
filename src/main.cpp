@@ -1,3 +1,6 @@
+// Autor: Pawe³ Kamiñski
+// Problem: Tron Yertle
+
 #include <iostream>
 #include "Turtle.h"
 #include "ThroneDynamicProgramming.h"
@@ -10,76 +13,56 @@
 
 using namespace std;
 
-void displayMenu()
+void info()
 {
-	cout << "1. Dynamic programming.\n"
-		<< "2. Naive.\n"
-		<< "3. Fast.\n"
-		<< "4. exit.\n";
+	cout << "Usage:\n\n"
+		<< "If you want to generate data:\n"
+		<< "yertle [-d/-n/-s] starting_size how_much_to_increase\n\n"
+		<< "If you want to read from stdin:\n"
+		<< "yertle [-d/-n/-s] < file_name\n\n"
+		<< "Where:\n"
+		<< "-d - dynamic programming\n"
+		<< "-n - naive\n"
+		<< "-f - fast\n"
+		<< "starting_size - the smallest problem size that will be computed\n"
+		<< "how_much_to_increase - how much problem size will be increased in every iteration\n";
 }
 
 int main(int argc, char** argv)
 {
-
 	unique_ptr<Throne> throne;
-	//throne.generateTurtles(1300);
-
-	ResultsTable results(0, 100);
-	int choice = 0;
-	bool running = true;
-	while (running)
+	if (argc >= 2)
 	{
-		displayMenu();
-		cin >> choice;
-		switch (choice)
-		{
-		case 1:
+		string option(argv[1]);
+
+		if (option == "-d")
 			throne = unique_ptr<ThroneDynamicProgramming>(new ThroneDynamicProgramming);
-			results.generateSolveAndPrintResults(*throne);
-			break;
-			
-		case 2:
+		else if (option == "-n")
 			throne = unique_ptr<ThroneNaive>(new ThroneNaive);
-			results.generateSolveAndPrintResults(*throne);
-			break;
-		
-		case 3:
+		else if (option == "-f")
 			throne = unique_ptr<ThroneFast>(new ThroneFast);
-			results.generateSolveAndPrintResults(*throne);
-			break;
-
-		case 4:
-			running = false;
-			break;
-		};
+		else
+		{
+			info();
+			return 1;
+		}
 	}
-	//results.generateSolveAndPrintResults(throne);
-	//odpowiedz 3
-	//throne.addTurtle(300, 1000);
-	//throne.addTurtle(200, 600);
-	//throne.addTurtle(1000, 1200);
-	//throne.addTurtle(100, 101);
 
-	// odpowiedz 5
-	//throne.addTurtle(5, 15);
-	//throne.addTurtle(3, 6);
-	//throne.addTurtle(4, 10);
-	//throne.addTurtle(1, 1);
-	//throne.addTurtle(2, 3);
+	if (argc == 4)
+	{
+		ResultsTable results( atoi(argv[3]), atoi(argv[2]) );
+		cout << "Computing..." << endl;
+		results.generateSolveAndPrintResults(*throne);
+	}
+	else if (argc == 2)
+	{
+		ResultsTable results;
+		throne->readData();
+		cout << "Computing..." << endl;
+		results.solveAndPrintResults(*throne);
+	}
+	else
+		info();
 
-
-	//odpowiedz 7
-	//throne.addTurtle(4, 19);
-	//throne.addTurtle(3, 9);
-	//throne.addTurtle(7, 20);
-	//throne.addTurtle(2, 3);
-	//throne.addTurtle(3, 6);
-	//throne.addTurtle(20, 40);
-	//throne.addTurtle(1, 1);
-
-	//cout << throne.solve() << endl;
-	//throne.printTurtles();
-	cin.get();
 	return 0;
-
 }
