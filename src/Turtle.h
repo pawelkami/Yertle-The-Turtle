@@ -37,12 +37,12 @@ public:
 	/*!
 	*   @return Weight of a Turtle.
 	*/
-	inline unsigned int getWeight() const;
+	unsigned int getWeight() const;
 
 	/*!
 	*   @return Strength of a Turtle.
 	*/
-	inline unsigned int getStrength() const;
+	unsigned int getStrength() const;
 	
 	/*!
 	*   @return Capacity of a Turtle(strength-weight).

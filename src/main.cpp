@@ -31,7 +31,6 @@ void info()
 int main(int argc, char** argv)
 {
 	unique_ptr<Throne> throne;
-	if (argc >= 2)
 	{
 		string option(argv[1]);
 
