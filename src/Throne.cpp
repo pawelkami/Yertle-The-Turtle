@@ -23,12 +23,6 @@ void Throne::addTurtle(unsigned int weight, unsigned int strength)
 	turtles.push_back(Turtle(weight, strength));
 }
 
-void Throne::generateTurtles()
-{
-	int max = rand() % MAX_TURTLES;
-	for (int i = 0; i < max; ++i)
-		addTurtle();
-}
 
 void Throne::generateTurtles(unsigned int count)
 {
@@ -55,11 +49,6 @@ void Throne::generateTurtles(unsigned int count)
 	}
 }
 
-void Throne::printTurtles() const
-{
-	for (auto& t : turtles)
-		std::cout << t << std::endl;
-}
 
 void Throne::clear()
 {
@@ -68,12 +57,25 @@ void Throne::clear()
 
 void Throne::readData()
 {
+	cout << "Podaj wartosci kolejnych zolwi w formacie:\n"
+		<< "waga wytrzymalosc\n"
+		<< "Przyklad:\n"
+		<< "2 5\n"
+		<< "Aby zakonczyc wpisywanie wcisnij jakikolwiek klawisz z litera i zatwierdz enterem" << endl;
+
 	while (!cin.eof())
 	{
 		string::iterator it;
 		string weight, strength, tmp;
 
 		getline(cin, tmp);
+
+		// sprawdzanie czy w ciagu znajduje sie litera - jesli tak to konczymy pobierac
+		for (auto c : tmp)
+		{
+			if (isalpha(c))
+				return;
+		}
 
 		if (tmp.empty())
 			continue;

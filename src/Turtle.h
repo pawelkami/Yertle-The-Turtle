@@ -6,46 +6,49 @@
 
 #include <iostream>
 
+/**
+* Klasa ¿ó³wia.
+*/
 class Turtle
 {
 private:
 	/*!
-	*  Weight of a Turtle.
+	*  Waga ¿ó³wia.
 	*/
 	unsigned int weight;
 
 	/*!
-	*  Strength of a Turtle.
+	*  Si³a ¿ó³wia.
 	*/
 	unsigned int strength;
 
 public:
 	/*!
-	*  Default constructor.
-	*  Creates Turtle with random weight and strength(strength is bigger than weight).
+	*  Domyœlny konstruktor.
+	*  Tworzy ¿ó³wia z losowymi wartoœciami(si³a jest wiêksza ni¿ waga).
 	*/
 	Turtle();
 
 	/*!
-	*  Creates Turtle with given attributes.
-	*  @param weight Weight of a Turtle
-	*  @param strength Strength of a Turtle
+	*  Tworzy ¿ó³wia z podanymi wartoœciami.
+	*  @param weight Waga ¿ó³wia
+	*  @param strength Si³a ¿ó³wia
 	*/
 	Turtle(unsigned int weight, unsigned int strength);
 	~Turtle();
 
 	/*!
-	*   @return Weight of a Turtle.
+	*   @return Zwraca wagê.
 	*/
 	unsigned int getWeight() const;
 
 	/*!
-	*   @return Strength of a Turtle.
+	*   @return Zwraca si³ê.
 	*/
 	unsigned int getStrength() const;
 	
 	/*!
-	*   @return Capacity of a Turtle(strength-weight).
+	*   @return Zwraca wytrzyma³oœæ(si³a - waga).
 	*/
 	unsigned int getCapacity() const;
 

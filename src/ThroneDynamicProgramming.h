@@ -9,6 +9,9 @@
 #include "project_declarations.h"
 #include "Throne.h"
 
+/**
+* Klasa s³u¿¹ca do przeprowadzenia obliczeñ za pomoc¹ algorytmu programowania dynamicznego.
+*/
 class ThroneDynamicProgramming : public Throne
 {
 public:

@@ -10,6 +10,9 @@
 #include "Throne.h"
 #include <list>
 
+/**
+* Klasa rozwi¹zuj¹ca problem naiwnie.
+*/
 class ThroneNaive : public Throne
 {
 public:

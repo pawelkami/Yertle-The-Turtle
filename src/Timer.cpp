@@ -5,8 +5,8 @@
 
 Timer::Timer()
 {
-	time_begin = clock();
-	time_end = time_begin;
+	time_begin = clock_::now();
+	time_end = clock_::now();
 }
 
 
@@ -18,15 +18,15 @@ Timer& Timer::getInstance()
 
 void Timer::start()
 {
-	time_begin = clock();
+	time_begin = clock_::now();
 }
 
 void Timer::stop()
 {
-	time_end = clock();
+	time_end = clock_::now();
 }
 
-time_t Timer::result()
+double Timer::result()
 {
-	return ( double( time_end - time_begin ) / CLOCKS_PER_SEC ) * 1000;
+	return std::chrono::duration_cast<second_>(time_end - time_begin).count() * 1000;
 }

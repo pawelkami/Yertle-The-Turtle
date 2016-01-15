@@ -5,23 +5,57 @@
 #define TIMER_H
 
 #include <ctime>
+#include <chrono>
 
+/**
+* Klasa timera zrealizowana jako singleton.
+*/
 class Timer
 {
 private:
-	time_t time_begin;
-	time_t time_end;
+	typedef std::chrono::high_resolution_clock clock_;
 
+	/**
+	* Czas pocz¹tku.
+	*/
+	std::chrono::time_point<clock_> time_begin;
+
+
+	/**
+	* Czas, w którym zatrzyma³ siê timer.
+	*/
+	std::chrono::time_point<clock_> time_end;
+
+	typedef std::chrono::duration<double, std::ratio<1> > second_;
+
+	/**
+	* Konstruktor 
+	*/
 	Timer();
+
 	Timer(const Timer&);
 	Timer& operator=(const Timer&);
 
 public:
+	/**
+	* Singleton, metoda getInstance().
+	*/
 	static Timer& getInstance();
+
+	/**
+	* Metoda rozpoczynaj¹ca pomiar.
+	*/
 	void start();
+
+	/**
+	* Metoda zatrzymuj¹ca pomiar.
+	*/
 	void stop();
 
-	time_t result();
+	/**
+	* Metoda zwracaj¹ca wynik.
+	*/
+	double result();
 };
 
 #endif

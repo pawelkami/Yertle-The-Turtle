@@ -10,6 +10,9 @@
 #include "project_declarations.h"
 #include "Throne.h"
 
+/**
+* Klasa rozwi¹zuj¹ca problem z u¿yciem presortowania.
+*/
 class ThroneFast : public Throne
 {
 private:

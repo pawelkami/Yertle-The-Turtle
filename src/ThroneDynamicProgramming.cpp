@@ -26,7 +26,7 @@ unsigned int ThroneDynamicProgramming::solve()
 	sort(turtles.begin(), turtles.end());
 	const size_t N = turtles.size();
 
-	// table in which Throne will be builded
+	// tablica z której zostanie zbudowany tron
 	unique_ptr < unique_ptr < unsigned int[]>[] > table(new unique_ptr<unsigned int[]>[N]);
 	for (unsigned int i = 0; i < N; ++i)
 		table[i] = unique_ptr<unsigned int[]>(new unsigned int[i+3]);
@@ -53,14 +53,7 @@ unsigned int ThroneDynamicProgramming::solve()
 		}
 	}
 
-	//for (unsigned int i = 0; i < N; ++i)
-	//{
-	//	for (unsigned j = 0; j < i + 3; ++j)
-	//		cout << table[i][j] << "\t";
-	//	cout << endl;
-	//}
-
-	// looking for index of last element in last row(height of Throne)
+	// szukanie ostatniego indeksu(wysokoœæ tronu)
 	for (unsigned int i = N; i >= 0; --i)
 	{
 		if (table[N - 1][i] != numeric_limits<unsigned int>::max())
@@ -79,6 +72,5 @@ double ThroneDynamicProgramming::getTn(const unsigned int problemSize) const
 	double res1 = problemSize * log2(problemSize);
 	double res2 = problemSize * problemSize;
 	
-	//return std::max(res1, res2);
 	return res1 +  2.0 * res2;
 }

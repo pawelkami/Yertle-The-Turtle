@@ -9,10 +9,11 @@
 
 using namespace std;
 
-ResultsTable::ResultsTable() : increasingProblem(0), startingFrom(0)
+ResultsTable::ResultsTable()
 {
 
 }
+
 
 ResultsTable::ResultsTable(unsigned int increasing, unsigned int starting) : increasingProblem(increasing), startingFrom(starting)
 {
@@ -28,7 +29,7 @@ ResultsTable::ResultsTable(unsigned int increasing, unsigned int starting) : inc
 void ResultsTable::generateSolveAndPrintResults(Throne& throne)
 {
 	times.clear();
-	int medianTime = 0;
+	double medianTime = 0.0;
 	for (int i = startingFrom; i <= MAX_TURTLES; i += increasingProblem)
 	{
 		throne.clear();
