@@ -104,8 +104,3 @@ unsigned int Throne::getSize() const
 	return turtles.size();
 }
 
-void Throne::printTurtles()
-{
-	for(auto t : turtles)
-		cout << t.getWeight() << " " << t.getStrength() << endl;
-}

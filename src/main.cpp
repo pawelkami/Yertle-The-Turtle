@@ -52,7 +52,6 @@ int main(int argc, char** argv)
 		ResultsTable results( atoi(argv[3]), atoi(argv[2]) );
 		cout << "Computing..." << endl;
 		results.generateSolveAndPrintResults(*throne);
-		throne->printTurtles();
 	}
 	else if (argc == 2)
 	{
