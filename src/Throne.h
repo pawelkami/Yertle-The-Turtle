@@ -58,6 +58,8 @@ public:
 	* Metoda wywo³uj¹ca algorytm uk³adaj¹cy ¿ó³wie na tronie.
 	*/
 	virtual unsigned int solve() = 0;
+
+void printTurtles();
 };
 
 #endif

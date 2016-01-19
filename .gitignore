@@ -31,5 +31,5 @@
 Debug/*
 Release/*
 *.opensdf
-build/
+build/*
 
